@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha 'test/**/*.js'  --compilers js:babel-core/register  --require ./test/test_helper.js  --recursive", 
+    "test": "./node_modules/mocha/bin/mocha 'test/**/*.js'  --compilers js:babel-core/register  --require ./test/test_helper.js  --recursive",
     "test:watch": "npm run test -- --watch"
   },
   "keywords": [],
@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
-    "immutable": "^3.8.1"
+    "immutable": "^3.8.1",
+    "redux": "^3.6.0"
   }
 }
