@@ -2,9 +2,12 @@ import {List, Map} from 'immutable';
 
 export const INITIAL_STATE = Map();
 
+
 export function setEntries(state, entries){
     return state.set('entries', List(entries));
 }
+
+
 
 function getWinners(vote) {
     if (!vote) return [];
@@ -37,6 +40,34 @@ export function vote(voteState, entry){
             tally => tally + 1
             );
 }
+/*
+export const setEntries = (state, entries) => {
+    return {..state, entries};
+};
 
+export const getWinners = (state) => {
+    const [a,b] = vote.pair;
+    const aVotes = vote.
+};
 
+export const next = (state) => {
+    const vote = state.vote;
+    const entries = state.entries;
+    if(entries.length == 1){
+        return {...state, winner: entries[0]};
+    } else {
+        return {...state, 
+            vote: { [entries[0]]: 0, [entries[1]]: 0},
+            entries: entries.slice(0,2), 
+        }
+    }
+};
+
+export const vote = (state, entry) {
+    return {...state, 
+            [entry]: state[entry] + 1,
+    };
+};
+
+*/
 
